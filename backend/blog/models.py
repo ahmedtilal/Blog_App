@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
-from django_editorjs import EditorJsField
+from django_quill.fields import QuillField
 from django.utils.translation import gettext_lazy as _
 
 # Create your models here.
@@ -19,7 +19,7 @@ class Post(models.Model):
 
     title = models.CharField(_("Title"), max_length=300, unique=True)
     slug = models.SlugField(_("Slug Field"), max_length=300, unique=True)
-    content = EditorJsField()
+    content = QuillField()
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="blog_posts"
     )
