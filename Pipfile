@@ -5,7 +5,8 @@ name = "pypi"
 
 [packages]
 django = "*"
-django-editorjs = "*"
+pillow = "*"
+django-quill-editor = "*"
 
 [dev-packages]
 pylint = "*"
